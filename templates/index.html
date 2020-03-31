@@ -1,0 +1,70 @@
+	<html>
+
+	<head>
+		<title>Password Generator</title>
+		<style>
+			#gen_pass_btn{
+				margin:auto;
+				font-size: 1.5em;
+				background-color: #4CAF50;
+				color: fff;
+				display:block
+			}
+			body{
+				background-color: #F3F2F2
+			}
+			.password_container{
+				
+			}
+			#generated_password{
+				color: #F22C1E;
+				font-size: 3em;
+				text-align:center;
+				font-family: "Arial";
+			}
+			.app_headding{
+				text-align:center;
+				font-family: "Arial";
+				font-size: 2.5em;
+				padding-top: 1%;
+				padding-bottom: 1%;
+			}
+			.btn_container{
+				position: sticky
+				margin: auto;
+			}
+		</style>
+	</head>
+	
+	<body onload="copy_to_clipboard()">
+		<div>
+			<div>
+				<p class="app_headding">Strong Password Generator</p>
+			</div>
+			<div class="password_container">
+				<p id="generated_password">
+					{{ password }}
+				</p>
+			</div>
+			<div class="btn_container">
+				<button id="gen_pass_btn" autofocus onclick="location.href = '/';">
+					Generate Password
+				</button>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script>
+	// user-defined function to copy password to clipboard.
+	function copy_to_clipboard(){
+		var dummy = document.createElement("textarea");
+		document.body.appendChild(dummy);
+		var password = document.getElementById("generated_password").textContent;
+		dummy.value = password
+		dummy.select();
+		document.execCommand("copy");
+		document.body.removeChild(dummy);
+	}
+</script>
