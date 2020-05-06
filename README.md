@@ -1,2 +1,10 @@
-# strong_password_generator
-This is a flask application for strong password generation. Each password generated is 16 characters long, contains at least one uppercase alphabet, at least one lowercase alphabet, at least one number and at least one symbol.
+# Strong password generator using flask:
+-----------------------------------------
+
+This is a flask application for strong password generation, each password is 16 characters long, contains at least one alphabet in uppercase, one in lowercase, one number and one symbol.
+
+# Screenshot of the application:
+--------------------------------
+![screenshot image of the application](https://github.com/amandeepsinghkhanna/strong_password_generator/blob/master/screenshot.PNG)
+
+It generates a new password everytime the page is reloaded.
